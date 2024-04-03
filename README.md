@@ -1,1 +1,8 @@
 # Interactive_Display_Game
+The interactive display game called "Reactor Meltdown" is implemented on Vivado that includes GPIO (General Purpose Input/Output) peripherals for controlling switches, buttons, LEDs, and a seven-segment display. The game involves a sequence of actions where the player needs to react within a certain time frame to either press specific buttons or flip switches based on a generated pattern. 
+
+The main function initializes the peripherals, configures the interrupt controller, and sets up the game state. It then enters a loop where it repeatedly calls the `startState()` function, which initializes the game and prompts the player to press any button to start. After starting, it enters the `gameLoop()` function, which manages the game logic. Within this loop, a random sequence is generated, and the player must mimic this sequence by pressing the correct buttons or flipping the correct switches. 
+
+The game provides feedback to the player indicating whether their input was correct or incorrect, and it keeps track of the player's score. If the player completes the sequence correctly within the time limit, they win the game; otherwise, they lose. After the game ends, the code disables interrupts, displays a game over message, and enters an infinite loop, continuously flashing the SSD to indicate the end of the game.
+
+Overall, the code implements a simple reaction-based game utilizing GPIO peripherals and an interrupt controller on a hardware platform. It provides a basic gaming experience where players must react quickly to changing patterns, making it suitable for educational purposes or as a simple entertainment application.
